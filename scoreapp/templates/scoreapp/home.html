@@ -1,0 +1,54 @@
+{% extends 'scoreapp/base.html' %}
+
+{% block title %}Forestry Scorecard{% endblock %}
+
+{% block content %}
+    <!-- Hero Section -->
+    <div class="text-center text-white" style="background: url('forest-bg.jpg') no-repeat center center/cover; padding: 6rem 1rem; background-size: cover;">
+        <div class="container">
+            <h1 style="font-size: 3.5rem; font-weight: bold;">Welcome to the Forestry Scorecard Platform</h1>
+            <p style="font-size: 1.3rem; margin: 1rem 0;">Track, visualize, and manage forestry health indicators with ease.</p>
+            <a href="{% url 'scoreapp:scorecard' %}" class="btn btn-light btn-lg" style="color: #198754; border-radius: 30px;">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container py-5">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div class="card-body">
+                        <h2 class="card-title text-success">Scorecards</h2>
+                        <p class="card-text">Visualize the performance of key forestry indicators at a glance.</p>
+                        <a href="{% url 'scoreapp:scorecard' %}" class="btn btn-success">View Scorecards</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div class="card-body">
+                        <h2 class="card-title text-success">Graphs and Trends</h2>
+                        <p class="card-text">Explore detailed graphs and trends over time across regions.</p>
+                        <a href="{% url 'scoreapp:graphs' %}" class="btn btn-success">View Graphs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100" style="border: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                    <div class="card-body">
+                        <h2 class="card-title text-success">Action Management</h2>
+                        <p class="card-text">Track and assign actions for forestry conservation projects.</p>
+                        <a href="{% url 'scoreapp:home' %}" class="btn btn-success">Explore Actions</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button (FAB) to go to Tree Planting Form -->
+    <a href="{% url 'scoreapp:treeplanting_form' %}" class="btn btn-success position-fixed bottom-0 end-0 m-4" style="width: 70px; height: 70px; font-size: 2rem; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+        <i class="bi bi-plus" style="font-size: 2rem;"></i>
+    </a>
+    
+
+{% endblock %}

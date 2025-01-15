@@ -1,0 +1,39 @@
+{% extends 'scoreapp/base.html' %}
+
+{% block title %}About-  Forestry Scorecard{% endblock %}
+
+{% block content %}
+    <style>
+        .about-header {
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .about-section {
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+        }
+    </style>
+
+    
+
+    <!-- About Us Section -->
+    <div class="container mt-4">
+        <h1 class="text-success text-center about-header">About Us</h1>
+        <div class="about-section shadow">
+            <p>
+                Welcome to the Forestry Scorecard Platform! Our mission is to promote sustainable forestry management by leveraging technology for data visualization, performance monitoring, and actionable insights.
+            </p>
+            <p>
+                Our platform provides stakeholders with the tools to track indicators, assess trends, and make informed decisions for forest conservation and restoration. Together, we aim to preserve forests for future generations.
+            </p>
+            <p>
+                <strong>Vision:</strong> A sustainable future where forests thrive and communities prosper.
+            </p>
+            <p>
+                <strong>Mission:</strong> To empower decision-makers with data-driven solutions for forest conservation and sustainable management.
+            </p>
+        </div>
+    </div>
+
+    {% endblock %}

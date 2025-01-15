@@ -1,0 +1,112 @@
+
+{% extends 'scoreapp/base.html' %}
+
+{% block title %}Graphs - Forestry Scorecard{% endblock %}
+
+{% block content %}
+    
+
+    <!-- Graphs Section -->
+    <div class="container">
+        <h1 class="text-success text-center page-header">Forestry Performance Graphs</h1>
+        <p class="text-center">Visualize trends and insights across forestry indicators.</p>
+
+        <div class="row">
+            <!-- Line Chart -->
+            <div class="col-md-6">
+                <h5 class="text-center">Tree Cover Over Time</h5>
+                <div class="chart-container">
+                    <canvas id="lineChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Bar Chart -->
+            <div class="col-md-6">
+                <h5 class="text-center">Carbon Sequestration by Region</h5>
+                <div class="chart-container">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <!-- Pie Chart -->
+            <div class="col-md-6">
+                <h5 class="text-center">Wildlife Habitat Conservation</h5>
+                <div class="chart-container">
+                    <canvas id="pieChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Doughnut Chart -->
+            <div class="col-md-6">
+                <h5 class="text-center">Forest Restoration Activities</h5>
+                <div class="chart-container">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- JavaScript for Charts -->
+    <script>
+        // Line Chart
+        const lineCtx = document.getElementById('lineChart').getContext('2d');
+        new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                datasets: [{
+                    label: 'Tree Cover (%)',
+                    data: [60, 65, 70, 75, 80, 85, 90],
+                    borderColor: 'green',
+                    backgroundColor: 'rgba(40, 167, 69, 0.5)',
+                    tension: 0.4
+                }]
+            }
+        });
+
+        // Bar Chart
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Region 1', 'Region 2', 'Region 3', 'Region 4'],
+                datasets: [{
+                    label: 'Carbon Sequestration (tons)',
+                    data: [200, 150, 180, 220],
+                    backgroundColor: ['green', 'yellow', 'red', 'blue']
+                }]
+            }
+        });
+
+        // Pie Chart
+        const pieCtx = document.getElementById('pieChart').getContext('2d');
+        new Chart(pieCtx, {
+            type: 'pie',
+            data: {
+                labels: ['Protected Areas', 'Threatened Areas', 'Reclaimed Areas'],
+                datasets: [{
+                    data: [50, 30, 20],
+                    backgroundColor: ['green', 'red', 'yellow']
+                }]
+            }
+        });
+
+        // Doughnut Chart
+        const doughnutCtx = document.getElementById('doughnutChart').getContext('2d');
+        new Chart(doughnutCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Planting', 'Maintenance', 'Monitoring'],
+                datasets: [{
+                    data: [40, 35, 25],
+                    backgroundColor: ['green', 'orange', 'blue']
+                }]
+            }
+        });
+    </script>
+
+   {% endblock %}

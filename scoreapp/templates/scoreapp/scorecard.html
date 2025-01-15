@@ -1,0 +1,441 @@
+{% extends 'scoreapp/base.html' %}
+
+{% block title %}Forestry Scorecard{% endblock %}
+
+{% block content %}
+    <style>
+        .table td, .table th {
+            vertical-align: middle;
+            text-align: center;
+        }
+        .region-column {
+            font-weight: bold;
+            background-color: #f8f9fa;
+        }
+    </style>
+
+    
+
+    <!-- Scorecard Section -->
+    <div class="container my-5">
+        <h1 class="text-success text-center">Forestry Scorecard</h1>
+        <p class="text-center">Visualize performance indicators across regions and time periods.</p>
+
+        <!-- Scorecard Table -->
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead class="bg-success text-white">
+                    <tr>
+                        <th>Region</th>
+                        <th>Tree Cover Increase</th>
+                        <th>Wildlife Habitat Conservation</th>
+                        <th>Carbon Sequestration</th>
+                        <th>Soil Health Improvement</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Mau Complex -->
+                    <tr>
+                        <td class="region-column">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#mau-complex">Mau Complex</a>
+                        </td>
+                        <td style="background-color: #28a745; color: white;">85%</td>
+                        <td style="background-color: #ffc107; color: black;">60%</td>
+                        <td style="background-color: #dc3545; color: white;">40%</td>
+                        <td style="background-color: #28a745; color: white;">90%</td>
+                    </tr>
+                    <!-- Counties under Mau Complex -->
+                    <tr id="mau-complex" class="collapse">
+                        <td colspan="5">
+                            <table class="table table-bordered">
+                                <thead class="bg-success text-white">
+                                    <tr>
+                                        <th>County</th>
+                                        <th>Tree Cover Increase</th>
+                                        <th>Wildlife Habitat Conservation</th>
+                                        <th>Carbon Sequestration</th>
+                                        <th>Soil Health Improvement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="region-column">County 1</td>
+                                        <td style="background-color: #28a745; color: white;">85%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #dc3545; color: white;">40%</td>
+                                        <td style="background-color: #28a745; color: white;">90%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 2</td>
+                                        <td style="background-color: #ffc107; color: black;">75%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                        <td style="background-color: #28a745; color: white;">65%</td>
+                                        <td style="background-color: #ffc107; color: black;">70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 3</td>
+                                        <td style="background-color: #28a745; color: white;">90%</td>
+                                        <td style="background-color: #dc3545; color: white;">55%</td>
+                                        <td style="background-color: #ffc107; color: black;">50%</td>
+                                        <td style="background-color: #dc3545; color: white;">60%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 4</td>
+                                        <td style="background-color: #dc3545; color: white;">70%</td>
+                                        <td style="background-color: #28a745; color: white;">80%</td>
+                                        <td style="background-color: #ffc107; color: black;">55%</td>
+                                        <td style="background-color: #28a745; color: white;">65%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Mt Kenya -->
+                    <tr>
+                        <td class="region-column">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#mt-kenya">Mt Kenya</a>
+                        </td>
+                        <td style="background-color: #ffc107; color: black;">75%</td>
+                        <td style="background-color: #dc3545; color: white;">60%</td>
+                        <td style="background-color: #28a745; color: white;">80%</td>
+                        <td style="background-color: #ffc107; color: black;">65%</td>
+                    </tr>
+                    <!-- Counties under Mt Kenya -->
+                    <tr id="mt-kenya" class="collapse">
+                        <td colspan="5">
+                            <table class="table table-bordered">
+                                <thead class="bg-success text-white">
+                                    <tr>
+                                        <th>County</th>
+                                        <th>Tree Cover Increase</th>
+                                        <th>Wildlife Habitat Conservation</th>
+                                        <th>Carbon Sequestration</th>
+                                        <th>Soil Health Improvement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="region-column">County 1</td>
+                                        <td style="background-color: #28a745; color: white;">70%</td>
+                                        <td style="background-color: #ffc107; color: black;">65%</td>
+                                        <td style="background-color: #dc3545; color: white;">55%</td>
+                                        <td style="background-color: #ffc107; color: black;">75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 2</td>
+                                        <td style="background-color: #dc3545; color: white;">65%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #28a745; color: white;">75%</td>
+                                        <td style="background-color: #dc3545; color: white;">70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 3</td>
+                                        <td style="background-color: #ffc107; color: black;">55%</td>
+                                        <td style="background-color: #28a745; color: white;">80%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 4</td>
+                                        <td style="background-color: #28a745; color: white;">90%</td>
+                                        <td style="background-color: #dc3545; color: white;">40%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Mt elgon-->
+                    <tr>
+                        <td class="region-column">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#mt-kenya">Mt Elgon</a>
+                        </td>
+                        <td style="background-color: #ffc107; color: black;">75%</td>
+                        <td style="background-color: #dc3545; color: white;">60%</td>
+                        <td style="background-color: #28a745; color: white;">80%</td>
+                        <td style="background-color: #ffc107; color: black;">65%</td>
+                    </tr>
+                    <!-- Counties under Mt Elgon-->
+                    <tr id="mt-kenya" class="collapse">
+                        <td colspan="5">
+                            <table class="table table-bordered">
+                                <thead class="bg-success text-white">
+                                    <tr>
+                                        <th>County</th>
+                                        <th>Tree Cover Increase</th>
+                                        <th>Wildlife Habitat Conservation</th>
+                                        <th>Carbon Sequestration</th>
+                                        <th>Soil Health Improvement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="region-column">County 1</td>
+                                        <td style="background-color: #28a745; color: white;">70%</td>
+                                        <td style="background-color: #ffc107; color: black;">65%</td>
+                                        <td style="background-color: #dc3545; color: white;">55%</td>
+                                        <td style="background-color: #ffc107; color: black;">75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 2</td>
+                                        <td style="background-color: #dc3545; color: white;">65%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #28a745; color: white;">75%</td>
+                                        <td style="background-color: #dc3545; color: white;">70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 3</td>
+                                        <td style="background-color: #ffc107; color: black;">55%</td>
+                                        <td style="background-color: #28a745; color: white;">80%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 4</td>
+                                        <td style="background-color: #28a745; color: white;">90%</td>
+                                        <td style="background-color: #dc3545; color: white;">40%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Aberdare Ranges-->
+                    <tr>
+                        <td class="region-column">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#mt-kenya">Aberdare Ranges</a>
+                        </td>
+                        <td style="background-color: #ffc107; color: black;">75%</td>
+                        <td style="background-color: #dc3545; color: white;">60%</td>
+                        <td style="background-color: #28a745; color: white;">80%</td>
+                        <td style="background-color: #ffc107; color: black;">65%</td>
+                    </tr>
+                    <!-- Counties under Aberdare Ranges-->
+                    <tr id="mt-kenya" class="collapse">
+                        <td colspan="5">
+                            <table class="table table-bordered">
+                                <thead class="bg-success text-white">
+                                    <tr>
+                                        <th>County</th>
+                                        <th>Tree Cover Increase</th>
+                                        <th>Wildlife Habitat Conservation</th>
+                                        <th>Carbon Sequestration</th>
+                                        <th>Soil Health Improvement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="region-column">
+                                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#county-1">County 1</a>
+                                        </td>
+                                        <td style="background-color: #28a745; color: white;">70%</td>
+                                        <td style="background-color: #ffc107; color: black;">65%</td>
+                                        <td style="background-color: #dc3545; color: white;">55%</td>
+                                        <td style="background-color: #ffc107; color: black;">75%</td>
+                                    </tr>
+                                    
+                                    <tr id="county-1" class="collapse">
+                                        <td colspan="5">
+                                            <table class="table table-bordered">
+                                                <thead class="bg-success text-white">
+                                                    <tr>
+                                                        <th>Subcounty</th>
+                                                        <th>Tree Cover Increase</th>
+                                                        <th>Wildlife Habitat Conservation</th>
+                                                        <th>Carbon Sequestration</th>
+                                                        <th>Soil Health Improvement</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="region-column">
+                                                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#subcounty-1">Subcounty 1</a>
+                                                        </td>
+                                                        <td style="background-color: #28a745; color: white;">80%</td>
+                                                        <td style="background-color: #ffc107; color: black;">70%</td>
+                                                        <td style="background-color: #dc3545; color: white;">60%</td>
+                                                        <td style="background-color: #28a745; color: white;">85%</td>
+                                                    </tr>
+                                                    <!-- Fields for Subcounty 1 -->
+                                                    <tr id="subcounty-1" class="collapse">
+                                                        <td colspan="5">
+                                                            <table class="table table-bordered">
+                                                                <thead class="bg-success text-white">
+                                                                    <tr>
+                                                                        <th>Field</th>
+                                                                        <th>Forest Coverage</th>
+                                                                        <th>Biodiversity Conservation</th>
+                                                                        <th>Soil Carbon Storage</th>
+                                                                        <th>Water Retention Capacity</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td class="region-column">
+                                                                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#field-1">F0001</a>
+                                                                        </td>
+                                                                        <td style="background-color: #28a745; color: white;">85%</td>
+                                                                        <td style="background-color: #ffc107; color: black;">75%</td>
+                                                                        <td style="background-color: #dc3545; color: white;">65%</td>
+                                                                        <td style="background-color: #28a745; color: white;">90%</td>
+                                                                    </tr>
+                                                                    <!-- Indicators for Field F0001 -->
+                                                                    <tr id="field-1" class="collapse">
+                                                                        <td colspan="5">
+                                                                            <table class="table table-bordered">
+                                                                                <thead class="bg-success text-white">
+                                                                                    <tr>
+                                                                                        <th>Indicator</th>
+                                                                                        <th>Forest Coverage</th>
+                                                                                        <th>Biodiversity Conservation</th>
+                                                                                        <th>Soil Carbon Storage</th>
+                                                                                        <th>Water Retention Capacity</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>Scores</td>
+                                                                                        <td style="background-color: #28a745; color: white;">85%</td>
+                                                                                        <td style="background-color: #ffc107; color: black;">75%</td>
+                                                                                        <td style="background-color: #dc3545; color: white;">65%</td>
+                                                                                        <td style="background-color: #28a745; color: white;">90%</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <!-- Add more fields as needed -->
+                                                                    <tr>
+                                                                        <td class="region-column">
+                                                                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#field-2">F0002</a>
+                                                                        </td>
+                                                                        <td style="background-color: #28a745; color: white;">88%</td>
+                                                                        <td style="background-color: #ffc107; color: black;">78%</td>
+                                                                        <td style="background-color: #dc3545; color: white;">60%</td>
+                                                                        <td style="background-color: #28a745; color: white;">92%</td>
+                                                                    </tr>
+                                                                    <!-- Indicators for Field F0002 -->
+                                                                    <tr id="field-2" class="collapse">
+                                                                        <td colspan="5">
+                                                                            <table class="table table-bordered">
+                                                                                <thead class="bg-success text-white">
+                                                                                    <tr>
+                                                                                        <th>Indicator</th>
+                                                                                        <th>Forest Coverage</th>
+                                                                                        <th>Biodiversity Conservation</th>
+                                                                                        <th>Soil Carbon Storage</th>
+                                                                                        <th>Water Retention Capacity</th>
+                                                                                    </tr>
+                                                                                </thead>
+                                                                                <tbody>
+                                                                                    <tr>
+                                                                                        <td>Scores</td>
+                                                                                        <td style="background-color: #28a745; color: white;">88%</td>
+                                                                                        <td style="background-color: #ffc107; color: black;">78%</td>
+                                                                                        <td style="background-color: #dc3545; color: white;">60%</td>
+                                                                                        <td style="background-color: #28a745; color: white;">92%</td>
+                                                                                    </tr>
+                                                                                </tbody>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="region-column">County 2</td>
+                                        <td style="background-color: #dc3545; color: white;">65%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #28a745; color: white;">75%</td>
+                                        <td style="background-color: #dc3545; color: white;">70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 3</td>
+                                        <td style="background-color: #ffc107; color: black;">55%</td>
+                                        <td style="background-color: #28a745; color: white;">80%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 4</td>
+                                        <td style="background-color: #28a745; color: white;">90%</td>
+                                        <td style="background-color: #dc3545; color: white;">40%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Cherangany Hills-->
+                    <tr>
+                        <td class="region-column">
+                            <a href="#" class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#mt-kenya">Cherangany Hills</a>
+                        </td>
+                        <td style="background-color: #ffc107; color: black;">75%</td>
+                        <td style="background-color: #dc3545; color: white;">60%</td>
+                        <td style="background-color: #28a745; color: white;">80%</td>
+                        <td style="background-color: #ffc107; color: black;">65%</td>
+                    </tr>
+                    <!-- Counties under Cherangany Hills-->
+                    <tr id="mt-kenya" class="collapse">
+                        <td colspan="5">
+                            <table class="table table-bordered">
+                                <thead class="bg-success text-white">
+                                    <tr>
+                                        <th>County</th>
+                                        <th>Tree Cover Increase</th>
+                                        <th>Wildlife Habitat Conservation</th>
+                                        <th>Carbon Sequestration</th>
+                                        <th>Soil Health Improvement</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="region-column">County 1</td>
+                                        <td style="background-color: #28a745; color: white;">70%</td>
+                                        <td style="background-color: #ffc107; color: black;">65%</td>
+                                        <td style="background-color: #dc3545; color: white;">55%</td>
+                                        <td style="background-color: #ffc107; color: black;">75%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 2</td>
+                                        <td style="background-color: #dc3545; color: white;">65%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #28a745; color: white;">75%</td>
+                                        <td style="background-color: #dc3545; color: white;">70%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 3</td>
+                                        <td style="background-color: #ffc107; color: black;">55%</td>
+                                        <td style="background-color: #28a745; color: white;">80%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="region-column">County 4</td>
+                                        <td style="background-color: #28a745; color: white;">90%</td>
+                                        <td style="background-color: #dc3545; color: white;">40%</td>
+                                        <td style="background-color: #ffc107; color: black;">60%</td>
+                                        <td style="background-color: #dc3545; color: white;">50%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <!-- Continue with other regions like Aberdare and Mt. Elgon similarly -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   {% endblock %}
