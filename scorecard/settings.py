@@ -139,10 +139,10 @@ EMAIL_HOST_USER = 'jmomanyi003@gmail.com'  # Replace with your email
 EMAIL_HOST_PASSWORD = 'j1u2s3t4i5n6e7'  # Replace with your email password
 
 
-from decouple import config
-
 SECRET_KEY = config('SECRET_KEY')
-DEBUG = config('DEBUG', default=False, cast=bool)
+DEBUG = config('DEBUG', default=True, cast=bool)
 DATABASES = {
-    'default': dj_database_url.config(default=config('DATABASE_URL'))
+    'default': dj_database_url.config(
+        default='sqlite:///db.sqlite3'
+    )
 }
